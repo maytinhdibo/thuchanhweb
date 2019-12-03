@@ -4,12 +4,51 @@
     <title>Simple Upload Example</title>
 </head>
 <body>
-  <header>  CREATE NEW BOOK</header>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding:0;
+        }
+    header{
+        color:#345;
+        background: #fff;
+        padding: 6px 9px;
+        box-shadow: 1px 2px 3px rgba(34, 34, 34, 0.4);
+    }
+    form{
+        padding:16px;
+        margin: auto;
+        border-radius:3px;
+        box-shadow: 0px 0px 3px rgba(34, 34, 34, 0.4);
+        margin-top:90px;
+       width: 500px;
+    }
+    label{
+        display: inline-block;
+        width: 200px;
+    }
+    input{
+        padding:9px;
+        width:200px;
+        border-radius:2px;
+        border:1px solid #ccc;
+        margin-bottom: 3px;
+        font-size:16px;
+    }
+    </style>
+  <header> <h1> CREATE NEW BOOK </h1></header>
 <form action="/create-book"  method="post">
+    <label>Name:</label>
     <input name="name" />
+    <br>
+    <label>Author:</label>
     <input name="author" />
+    <br>
+    <label>Published date:</label>
     <input type="date" value="2013-01-08" name="time">
-    <input type="submit" value="Upload">
+    <br>
+    <input style="background: #345;color:#fff" type="submit" value="Create">
 </form>
 </body>
 </html>
